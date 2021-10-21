@@ -1,0 +1,123 @@
+/* MOBILE VERSION */
+body {
+  color: #767676;
+}
+
+.new-product {
+  width: 85%;
+  margin: 0 auto;
+}
+
+.new-product-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin: 24px 0;
+}
+
+.new-product .back-btn {
+  font-family: "Muller Light";
+  margin-top: 16px;
+  font-size: 12px;
+  text-decoration: none;
+  color: #767676;
+}
+
+.new-product-container h3 {
+  font-family: "Muller Bold";
+  text-align: center;
+  font-size: 24px;
+}
+
+.new-product-container p {
+  font-family: "Muller Light";
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 32px 0;
+}
+
+.new-product-container img {
+  width: 70%;
+}
+
+.new-product-container h2 {
+  font-family: "Muller Light";
+  font-size: 12px;
+}
+
+.new-product-container h2 span {
+  font-family: "Muller Bold";
+  font-size: 24px;
+}
+
+.new-product-container .buy-now-btn {
+  text-decoration: none;
+  color: #fff;
+  background: linear-gradient(to right, var(--second-color), #c3958f);
+  border-radius: 30px;
+  padding: 8px 24px;
+  font-family: "Muller Light";
+  font-size: 12px;
+  margin: 8px 0;
+}
+
+/* ================ MEDIA QUERRIES ================ */
+/* IPad Vertical - 768x1024 */
+@media only screen and (min-width: 768px) {
+  .new-product {
+    margin: 40px auto;
+  }
+  .new-product-container {
+    margin: 32px 0;
+  }
+
+  .new-product .back-btn {
+    font-size: 16px;
+  }
+
+  .new-product-container h3 {
+    font-size: 48px;
+  }
+
+  .new-product-container p {
+    font-size: 24px;
+    margin: 40px 0;
+  }
+
+  .new-product-container img {
+    width: 50%;
+  }
+
+  .new-product-container h2 {
+    font-size: 24px;
+  }
+
+  .new-product-container h2 span {
+    font-size: 40px;
+  }
+
+  .new-product-container .buy-now-btn {
+    border-radius: 50px;
+    padding: 20px 40px;
+    font-size: 24px;
+  }
+}
+
+/* LARGE SCREENS 1024px wide */
+@media only screen and (min-width: 1024px) {
+  .new-product-container img {
+    width: 30%;
+  }
+}
+
+/* LARGE SCREENS 1366px WIDE */
+@media only screen and (min-width: 1366px) {
+  .new-product {
+    max-width: 1366px;
+  }
+
+  .new-product-container img {
+    width: 20%;
+  }
+}

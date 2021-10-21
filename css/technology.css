@@ -1,0 +1,99 @@
+/* MOBILE VERSION */
+body {
+  color: #767676;
+}
+
+.technology {
+  width: 85%;
+  margin: 0 auto;
+}
+
+.technology .back-btn {
+  font-family: "Muller Light";
+  font-size: 12px;
+  text-decoration: none;
+  color: #767676;
+  align-self: flex-start;
+}
+
+.technology-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin: 24px 0;
+}
+
+.technology-container h3 {
+  font-family: "Muller Bold";
+  text-align: center;
+  font-size: 24px;
+}
+
+.technology-container h4 {
+  font-family: "Muller Medium";
+  align-self: flex-start;
+  margin-top: 32px;
+}
+
+.technology-container p {
+  font-family: "Muller Light";
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 16px 0;
+}
+
+.technology-container img {
+  width: 100%;
+}
+
+.technology-container h2 {
+  font-family: "Muller Light";
+  font-size: 12px;
+}
+
+.technology-container h2 span {
+  font-family: "Muller Bold";
+  font-size: 24px;
+}
+
+/* ================ MEDIA QUERRIES ================ */
+/* Large Phones and Tablets */
+@media only screen and (min-width: 768px) {
+  .technology {
+    margin: 24px auto;
+  }
+
+  .technology-container {
+    margin: 32px 0;
+  }
+
+  .technology-container h3 {
+    font-size: 32px;
+  }
+
+  .technology-container h4 {
+    margin-top: 40px;
+  }
+
+  .technology-container p {
+    font-size: 16px;
+    margin: 24px 0;
+  }
+
+  .technology-container img {
+    width: 70%;
+  }
+
+  .technology-container h2 {
+    font-size: 16px;
+  }
+}
+
+/* LARGE SCREENS 1024px wide */
+@media only screen and (min-width: 1024px) {
+}
+
+/* LARGE SCREENS 1366px WIDE */
+@media only screen and (min-width: 1366px) {
+}

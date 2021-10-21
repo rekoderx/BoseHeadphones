@@ -1,0 +1,123 @@
+/* MOBILE VERSION */
+body {
+  color: #767676;
+}
+
+.outdoors {
+  width: 85%;
+  margin: 0 auto;
+}
+
+.outdoors-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin: 24px 0;
+}
+
+.outdoors .back-btn {
+  font-family: "Muller Light";
+  margin-top: 16px;
+  font-size: 12px;
+  text-decoration: none;
+  color: #767676;
+}
+
+.outdoors-container h3 {
+  font-family: "Muller Bold";
+  text-align: center;
+  font-size: 24px;
+}
+
+.outdoors-container p {
+  font-family: "Muller Light";
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 32px 0;
+}
+
+.outdoors-container img {
+  width: 70%;
+}
+
+.outdoors-container h2 {
+  font-family: "Muller Light";
+  font-size: 12px;
+}
+
+.outdoors-container h2 span {
+  font-family: "Muller Bold";
+  font-size: 24px;
+}
+
+.outdoors-container .buy-now-btn {
+  text-decoration: none;
+  color: #fff;
+  background: linear-gradient(to right, var(--second-color), #c3958f);
+  border-radius: 30px;
+  padding: 8px 24px;
+  font-family: "Muller Light";
+  font-size: 12px;
+  margin: 8px 0;
+}
+
+/* ================ MEDIA QUERRIES ================ */
+/* IPad Vertical - 768x1024 */
+@media only screen and (min-width: 768px) {
+  .outdoors {
+    margin: 40px auto;
+  }
+  .outdoors-container {
+    margin: 32px 0;
+  }
+
+  .outdoors .back-btn {
+    font-size: 16px;
+  }
+
+  .outdoors-container h3 {
+    font-size: 48px;
+  }
+
+  .outdoors-container p {
+    font-size: 24px;
+    margin: 40px 0;
+  }
+
+  .outdoors-container img {
+    width: 40%;
+  }
+
+  .outdoors-container h2 {
+    font-size: 24px;
+  }
+
+  .outdoors-container h2 span {
+    font-size: 40px;
+  }
+
+  .outdoors-container .buy-now-btn {
+    border-radius: 50px;
+    padding: 20px 40px;
+    font-size: 24px;
+  }
+}
+
+/* LARGE SCREENS 1024px wide */
+@media only screen and (min-width: 1024px) {
+  .wfh-container img {
+    width: 20%;
+  }
+}
+
+/* LARGE SCREENS 1366px WIDE */
+@media only screen and (min-width: 1366px) {
+  .outdoors {
+    max-width: 1366px;
+  }
+
+  .outdoors-container img {
+    width: 20%;
+  }
+}

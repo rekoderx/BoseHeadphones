@@ -1,0 +1,1291 @@
+/* VARIABLES */
+:root {
+  --main-color: #575454;
+  --second-color: #edb2aa;
+  --third-color: #e2dad2;
+}
+
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* GENERAL RULES */
+@font-face {
+  font-family: "Muller Black Italic";
+  src: url(../fonts/MullerBlackItalic.ttf);
+}
+
+@font-face {
+  font-family: "Muller Extra Bold";
+  src: url(../fonts/MullerExtraBold.ttf);
+}
+
+@font-face {
+  font-family: "Muller Regular";
+  src: url(../fonts/MullerRegular.ttf);
+}
+
+@font-face {
+  font-family: "Muller Bold";
+  src: url(../fonts/MullerBold.ttf);
+}
+
+@font-face {
+  font-family: "Muller Light";
+  src: url(../fonts/MullerLight.ttf);
+}
+
+@font-face {
+  font-family: "Muller Medium";
+  src: url(../fonts/MullerMedium.ttf);
+}
+
+.buy-btn {
+  font-family: "Muller Light", sans-serif;
+  text-decoration: none;
+  color: #fff;
+  font-size: 12px;
+  border-radius: 30px;
+  padding: 10px 30px;
+  background: linear-gradient(to right, var(--second-color), #c3958f);
+}
+
+.navigation-menu {
+  background: var(--main-color);
+  height: 100%;
+  width: 50%;
+  padding: 10px 0;
+  margin: 0;
+  list-style: none;
+  text-align: center;
+  position: fixed;
+  right: -50%;
+  top: 0;
+  transition: all 0.5s;
+  z-index: 1;
+  font-size: 14px;
+}
+
+.navigation-menu li {
+  padding: 16px 0;
+}
+
+.navigation-menu li:nth-of-type(2n) {
+  background: var(--main-color);
+}
+
+.navigation-menu li:hover {
+  background: #444;
+}
+
+.navigation-menu a {
+  color: var(--third-color);
+  text-decoration: none;
+  font-family: "Muller Light";
+  font-size: 16px;
+  display: block;
+  transition: all 0.3s;
+}
+
+.navbar {
+  background: linear-gradient(to right, #767676, #4b4b4b);
+  left: 0;
+  padding: 20px 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar .logo {
+  position: relative;
+  left: -10%;
+}
+
+.content {
+  width: 100%;
+  padding-top: 75px;
+  transition: all 0.5s;
+  position: relative;
+  left: 0;
+}
+
+/* Hide the checkbox */
+#toggle {
+  display: none;
+}
+
+/* Use this label to toggle the sliding menu */
+label[for="toggle"] {
+  font-family: "Muller Regular";
+  cursor: pointer;
+  font-size: 16px;
+  padding-left: 24px;
+}
+
+/* Slide menu when checkbox is checked */
+input#toggle:checked + ul.navigation-menu {
+  right: 0;
+}
+
+/* Also slide content when checkbox is checked */
+input#toggle:checked ~ .content {
+  left: -45%;
+}
+
+/* MOBILE STYLING */
+/* HEADER - HOMEPAGE */
+.header-container .desktop-menu {
+  display: none;
+}
+
+.header {
+  color: var(--third-color);
+  height: 100vh;
+  background-image: linear-gradient(to bottom right, #767676, #333);
+  border-radius: 0 0 30px 30px;
+}
+
+.header-container {
+  width: 85%;
+  margin: 0 auto;
+  padding: 16px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+}
+
+.header-container .mobile-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 0;
+}
+
+.header-container .mobile-menu .logo {
+  font-family: "Muller Black Italic";
+  line-height: 0.7;
+}
+
+.header-container .line {
+  width: 20px;
+  height: 2px;
+  background-color: var(--third-color);
+}
+
+.header-container .middle-line {
+  margin: 2px 0;
+}
+
+.header-container .desktop-content {
+  margin-bottom: 40px;
+}
+
+.header-container .desktop-content .hero-image img {
+  width: 90%;
+  display: block;
+  margin: 32px auto;
+}
+
+.dekstop-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.header-container .desktop-content .desktop-text .header-title {
+  font-family: "Muller Extra Bold";
+  font-size: 30px;
+  line-height: 0.95;
+  letter-spacing: 1px;
+  border-right: 1px solid var(--third-color);
+}
+
+.header-container .header-title .sound {
+  color: var(--second-color);
+}
+
+.header-container .desktop-content .desktop-text .header-paragraph {
+  display: none;
+}
+
+.header-container .buttons {
+  text-align: center;
+}
+
+.header-container .buynow,
+.header-container .learnmore {
+  font-family: "Muller Light";
+  text-decoration: none;
+  color: #fff;
+  font-size: 12px;
+  border-radius: 30px;
+  padding: 10px 30px;
+}
+
+.header-container .buynow {
+  background: linear-gradient(to right, var(--second-color), #c3958f);
+  margin-right: 8px;
+}
+
+.header-container .learnmore {
+  background: linear-gradient(to right, #777, #333);
+}
+
+.header-container .arrow {
+  width: 10px;
+  align-self: center;
+}
+
+/* NEW PAGE STYLING */
+.new {
+  width: 85%;
+  margin: 16px auto 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.new h2 {
+  font-family: "Muller Bold";
+  font-size: 32px;
+  text-align: center;
+  line-height: 1.2;
+  color: #575454;
+}
+
+.new h4 {
+  font-family: "Muller Light";
+  margin: 16px 0;
+  color: var(--main-color);
+}
+
+.new p {
+  color: var(--main-color);
+  font-family: "Muller Light";
+  font-size: 8px;
+  font-weight: 200;
+  line-height: 1.4;
+  text-align: center;
+}
+
+.new .new-image img {
+  width: 60%;
+  display: block;
+  margin: 16px auto;
+}
+
+.new .details-and-buy {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.new .details-and-buy .buy-btn {
+  font-size: 12px;
+  color: #fff;
+}
+
+.new .details-and-buy .details h5 {
+  font-family: "Muller Light";
+  color: var(--main-color);
+  font-size: 10px;
+  line-height: 1.4;
+}
+
+/* ADVANCED TECHNOLOGY */
+#technology-section {
+  color: var(--third-color);
+  background-image: linear-gradient(to bottom right, #767676, #333);
+  border-radius: 30px;
+}
+
+.technology {
+  width: 85%;
+  margin: 16px auto;
+  padding: 24px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.technology h2 {
+  color: var(--third-color);
+  font-family: "Muller Bold";
+  font-size: 32px;
+  text-align: center;
+  line-height: 1.2;
+}
+
+.technology h5 {
+  align-self: flex-start;
+  margin: 32px 0 16px;
+  font-family: "Muller Medium";
+  font-size: 16px;
+}
+
+.technology p {
+  font-size: 12px;
+  font-family: "Muller Light";
+  line-height: 1.5;
+}
+
+.technology img {
+  width: 90%;
+  margin: 32px;
+}
+
+.technology .technology-readmore {
+  background: linear-gradient(to right, var(--second-color), #c3958f);
+  margin-right: 8px;
+  font-family: "Muller Light";
+  text-decoration: none;
+  color: #fff;
+  font-size: 12px;
+  border-radius: 30px;
+  padding: 10px 30px;
+  margin: 16px 0;
+}
+
+/* FEATURED PRODUCTS */
+#featured-products .products-container {
+  width: 85%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+}
+
+#featured-products h2 {
+  color: #575454;
+  font-family: "Muller Bold";
+  font-size: 32px;
+  text-align: center;
+  line-height: 1.2;
+}
+
+#featured-products .products-container .card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--third-color);
+}
+
+#featured-products .products-container .card h4 {
+  font-family: "Muller Light";
+  margin: 16px 0;
+  color: var(--main-color);
+}
+
+.card .details h5 {
+  font-family: "Muller Light";
+  color: var(--main-color);
+  font-size: 10px;
+  line-height: 1.4;
+}
+
+#featured-products .products-container .card > img {
+  width: 70%;
+}
+
+#featured-products .products-container .outdoors-card img {
+  width: 60%;
+}
+
+#featured-products .products-container .card .product-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin: 16px 0 24px;
+}
+
+#featured-products .products-container .card .buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card .buttons .buy-now,
+.card .buttons .read-more {
+  width: 88px;
+  height: 32px;
+  border-radius: 30px;
+  border: none;
+  margin: 3px 0;
+}
+
+.card .buttons .buy-now {
+  background: linear-gradient(to right, var(--second-color), #c3958f);
+}
+
+.card .buttons .read-more {
+  background: linear-gradient(to right, #777, #333);
+}
+
+.card .buttons button a {
+  font-family: "Muller Light";
+  font-size: 12px;
+  text-decoration: none;
+  color: white;
+  vertical-align: center;
+}
+
+/* REVIEWS STYLING */
+#reviews {
+  color: var(--third-color);
+  background-image: linear-gradient(to bottom right, #767676, #333);
+  border-radius: 30px;
+}
+#reviews h2 {
+  color: var(--third-color);
+  font-family: "Muller Bold";
+  font-size: 32px;
+  text-align: center;
+  line-height: 1.2;
+  padding-top: 24px;
+}
+
+#reviews .reviews-container {
+  width: 85%;
+  margin: 16px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#reviews .reviews-container .line {
+  width: 50%;
+  height: 1px;
+  background: var(--third-color);
+}
+
+#reviews .reviews-container .review {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin: 24px 0 32px;
+}
+
+#reviews .reviews-container .review h4 {
+  font-size: 18px;
+  font-family: "Muller Medium";
+  margin: 16px 0;
+  color: var(--third-color);
+}
+
+#reviews .reviews-container .review p {
+  font-size: 12px;
+  font-family: "Muller Light";
+  line-height: 1.5;
+  text-align: center;
+  font-style: italic;
+}
+
+#reviews .reviews-container .review p span {
+  font-weight: 500;
+}
+
+#reviews .reviews-container .review .review-image {
+  width: 56px;
+  height: 56px;
+  border: none;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#reviews .reviews-container .review .one {
+  background-image: url("../images/review1.jpg");
+}
+
+#reviews .reviews-container .review .two {
+  background-image: url("../images/review2.jpg");
+}
+
+/* FORM STYLING */
+#contact-us h2 {
+  color: var(--main-color);
+  font-family: "Muller Bold";
+  font-size: 32px;
+  text-align: center;
+  line-height: 1.2;
+  margin-bottom: 24px;
+}
+
+#contact-us form {
+  width: 85%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#contact-us form label {
+  font-family: "Muller Light";
+  font-size: 14px;
+  color: var(--main-color);
+}
+
+#contact-us form input {
+  height: 30px;
+  margin: 4px 0 16px;
+  border: 1px solid var(--third-color);
+  font-family: "Muller Light";
+  font-size: 12px;
+  color: lightgray;
+}
+
+#contact-us form textarea {
+  margin: 4px 0 16px;
+  border: 1px solid var(--third-color);
+  font-family: "Muller Light";
+  font-size: 12px;
+  color: lightgray;
+}
+
+#contact-us form button {
+  font-family: "Muller Light";
+  font-size: 12px;
+  color: #fff;
+  width: 88px;
+  height: 32px;
+  border-radius: 30px;
+  border: none;
+  margin: 3px auto 24px auto;
+  background: linear-gradient(to right, var(--second-color), #c3958f);
+}
+
+/* FOOTER STYLING */
+#footer {
+  color: var(--third-color);
+  background-image: linear-gradient(to bottom right, #767676, #333);
+  border-radius: 30px 30px 0 0;
+}
+
+#footer .footer-container {
+  width: 85%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 0;
+}
+
+#footer .footer-container .address,
+#footer .footer-container .info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#footer .footer-container .address h5,
+#footer .footer-container .info h5 {
+  font-family: "Muller Light";
+  font-size: 10px;
+  font-weight: 200;
+  line-height: 1.5;
+}
+
+#footer .footer-container .info div {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+#footer .footer-container h3 {
+  display: none;
+}
+
+/* ==================== MEDIA QUERIES ===================== */
+/* For bigger height screens like Iphones */
+@media screen and (min-width: 414px), screen and (min-height: 736px) {
+  .header-container .desktop-content .desktop-text .header-title {
+    font-size: 32px;
+  }
+
+  .header-container .desktop-content .hero-image img {
+    margin: 0 auto 56px auto;
+  }
+
+  .new p {
+    font-size: 10px;
+  }
+
+  .new .new-image img {
+    width: 65%;
+  }
+
+  .new .details-and-buy .details h5 {
+    font-size: 10px;
+  }
+
+  .new .details-and-buy .buy-btn {
+    font-size: 14px;
+  }
+
+  .technology .technology-readmore {
+    font-size: 14px;
+  }
+
+  #contact-us form button {
+    font-size: 14px;
+  }
+}
+
+@media screen and (min-width: 414px), screen and (min-height: 812px) {
+  .header-container .desktop-content .desktop-text .header-title {
+    font-size: 48px;
+  }
+
+  .header-container .buynow,
+  .header-container .learnmore {
+    font-size: 14px;
+    padding: 12px 32px;
+  }
+
+  .new p {
+    font-size: 10px;
+  }
+
+  .new .new-image img {
+    width: 65%;
+  }
+
+  .new .details-and-buy .details h5 {
+    font-size: 10px;
+  }
+}
+
+/* For larger phones and tablets */
+@media screen and (min-width: 768px) {
+  .navigation-menu a {
+    font-size: 32px;
+  }
+
+  /* Hide the checkbox */
+  #toggle {
+    display: none;
+  }
+
+  .navbar h3 {
+    font-size: 40px;
+  }
+
+  /* Use this label to toggle the sliding menu */
+  label[for="toggle"] {
+    font-size: 32px;
+    padding-left: 56px;
+  }
+
+  .header-container .desktop-content .desktop-text .header-title {
+    font-size: 64px;
+  }
+
+  .header-container .desktop-content .hero-image img {
+    width: 70%;
+    margin: 0 auto 56px auto;
+  }
+
+  .header-container .buynow,
+  .header-container .learnmore {
+    font-size: 20px;
+    padding: 12px 32px;
+  }
+
+  .new h2 {
+    font-size: 48px;
+  }
+
+  .new h4 {
+    font-size: 24px;
+    margin: 24px 0;
+  }
+
+  .new p {
+    font-size: 16px;
+  }
+
+  .new .new-image img {
+    width: 45%;
+  }
+
+  .new .details-and-buy .details h5 {
+    font-size: 16px;
+  }
+
+  .new .details-and-buy .buy-btn {
+    font-size: 20px;
+    padding: 16px 40px;
+  }
+
+  .technology {
+    width: 85%;
+    padding: 32px 0;
+  }
+
+  .technology img {
+    width: 40%;
+  }
+
+  .technology h2 {
+    font-size: 40px;
+  }
+
+  .technology h5 {
+    font-size: 24px;
+  }
+
+  .technology p {
+    font-size: 20px;
+    line-height: 1.6;
+  }
+
+  .technology .technology-readmore {
+    background: linear-gradient(to right, var(--second-color), #c3958f);
+    margin: 0 auto;
+    font-size: 20px;
+    padding: 16px 40px;
+    margin: 32px 0;
+  }
+
+  #featured-products h2 {
+    font-size: 40px;
+    margin-top: 40px;
+  }
+
+  #featured-products h4 {
+    font-size: 32px;
+  }
+
+  #featured-products .products-container .card {
+    margin: 24px 0;
+  }
+
+  #featured-products .products-container .card .details h5 {
+    font-size: 20px;
+  }
+
+  #featured-products .products-container .card img {
+    width: 50%;
+    margin: 32px 0;
+  }
+
+  .card .buttons .buy-now,
+  .card .buttons .read-more {
+    width: 160px;
+    height: 64px;
+    border-radius: 30px;
+    border: none;
+    margin: 3px 0;
+  }
+
+  .card .buttons .buy-now {
+    background: linear-gradient(to right, var(--second-color), #c3958f);
+  }
+
+  .card .buttons .read-more {
+    background: linear-gradient(to right, #777, #333);
+  }
+
+  .card .buttons button a {
+    font-family: "Muller Light";
+    font-size: 20px;
+    text-decoration: none;
+    color: white;
+    vertical-align: center;
+  }
+
+  #reviews h2 {
+    font-size: 40px;
+    padding-top: 64px;
+  }
+
+  #reviews .reviews-container {
+    width: 85%;
+    margin: 24px auto;
+  }
+
+  #reviews .reviews-container .review {
+    margin: 32px 0 48px;
+  }
+
+  #reviews .reviews-container .review h4 {
+    font-size: 24px;
+    margin: 24px 0;
+  }
+
+  #reviews .reviews-container .review p {
+    font-size: 20px;
+  }
+
+  #reviews .reviews-container .review .review-image {
+    width: 96px;
+    height: 96px;
+  }
+
+  #contact-us h2 {
+    font-size: 40px;
+  }
+
+  #contact-us form {
+    width: 50%;
+  }
+
+  #contact-us form label {
+    font-size: 20px;
+  }
+
+  #contact-us form input {
+    height: 40px;
+    font-size: 18px;
+  }
+
+  #contact-us form textarea {
+    font-size: 18px;
+  }
+
+  #contact-us form button {
+    font-size: 20px;
+    width: 160px;
+    height: 56px;
+  }
+
+  #footer .footer-container .address h5,
+  #footer .footer-container .info h5 {
+    font-size: 20px;
+  }
+}
+
+/*  ============ 1024px WIDE SCREENS ============= */
+@media screen and (min-width: 1024px) {
+  .header-container .mobile-menu {
+    display: none;
+  }
+
+  .header-container .desktop-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .header-container .desktop-menu .menu ul {
+    display: flex;
+  }
+
+  .header-container .desktop-menu .menu ul li {
+    list-style-type: none;
+  }
+
+  .header-container .desktop-menu .menu ul li a {
+    color: var(--third-color);
+    text-decoration: none;
+    font-size: 16px;
+    font-family: "Muller Light";
+    margin-right: 40px;
+  }
+
+  .header-container .desktop-menu .logo {
+    font-size: 40px;
+    font-family: "MullerExtraBold";
+    font-style: italic;
+    font-weight: 800;
+  }
+
+  .header-container .buttons {
+    align-self: flex-start;
+  }
+
+  .header-container .desktop-content {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+  }
+
+  .header-container .desktop-content .hero-image img {
+    width: 85%;
+    display: block;
+    margin-right: 0;
+  }
+
+  .header-container .desktop-content .desktop-text .header-title {
+    font-size: 72px;
+    margin-bottom: 40px;
+    border: none !important;
+  }
+
+  .header-container .desktop-content .desktop-text .header-paragraph {
+    display: block;
+    font-size: 16px;
+    font-family: "Muller Light";
+    width: 360px;
+    line-height: 1.5;
+  }
+
+  .header-container .buynow,
+  .header-container .learnmore {
+    font-size: 20px;
+    padding: 12px 32px;
+  }
+
+  .new {
+    margin: 32px auto;
+  }
+
+  .new .new-image img {
+    width: 30%;
+  }
+
+  .technology img {
+    width: 50%;
+  }
+
+  #featured-products .products-container {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    column-gap: 80px;
+    row-gap: 40px;
+  }
+
+  #featured-products .products-container .outdoors-card img {
+    width: 40%;
+  }
+
+  #featured-products .products-container .sports-card img {
+    width: 50%;
+  }
+
+  #featured-products .products-container .office-card img {
+    width: 60%;
+  }
+
+  #featured-products h2 {
+    font-size: 40px;
+    margin-bottom: 32px;
+  }
+
+  #featured-products .products-container .card .product-details h5 {
+    font-size: 16px;
+  }
+
+  #featured-products .products-container .card h4 {
+    font-size: 24px;
+  }
+
+  .card .buttons .buy-now,
+  .card .buttons .read-more {
+    width: 104px;
+    height: 34px;
+  }
+
+  .card .buttons button a {
+    font-size: 12px;
+  }
+
+  #reviews {
+    padding: 0 0 32px 0;
+  }
+
+  #reviews h2 {
+    font-size: 40px;
+  }
+
+  #reviews .reviews-container {
+    flex-direction: row;
+  }
+
+  #reviews .reviews-container .line {
+    width: 1px;
+    height: 20vh;
+    background: var(--third-color);
+  }
+
+  #reviews .reviews-container .review {
+    width: 45%;
+  }
+
+  #reviews .reviews-container .review h4 {
+    font-size: 24px;
+    margin: 24px 0;
+  }
+
+  #reviews .reviews-container .review p {
+    font-size: 18px;
+  }
+
+  #reviews .reviews-container .review .review-image {
+    width: 88px;
+    height: 88px;
+    border: none;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  #reviews .reviews-container .review .one {
+    background-image: url("../images/review1.jpg");
+  }
+
+  #reviews .reviews-container .review .two {
+    background-image: url("../images/review2.jpg");
+  }
+
+  #contact-us {
+    width: 50%;
+    margin: 24px auto;
+  }
+
+  #contact-us h2 {
+    font-size: 40px;
+    margin-top: 32px;
+  }
+
+  #contact-us form {
+    width: 85%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  #contact-us form label {
+    font-size: 16px;
+  }
+
+  #contact-us form input {
+    font-size: 12px;
+  }
+
+  #contact-us form textarea {
+    font-size: 12px;
+  }
+
+  #contact-us form button {
+    font-size: 12px;
+    width: 120px;
+    height: 40px;
+  }
+
+  #footer .footer-container {
+    padding: 40px 0;
+  }
+
+  #footer .footer-container h3 {
+    font-size: 48px;
+  }
+
+  #footer .footer-container .address h5,
+  #footer .footer-container .info h5 {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+}
+
+/* LARGE SCREENS 1366 x 768 */
+@media screen and (min-width: 1366px) {
+  .header-container {
+    max-width: 1366px;
+  }
+
+  .header-container .desktop-menu .logo {
+    font-size: 40px;
+  }
+
+  .header-container .desktop-menu .menu ul li a {
+    font-size: 16px;
+  }
+
+  .header-container .desktop-content {
+    justify-content: space-between;
+    margin: 0;
+  }
+
+  .header-container .desktop-content .hero-image {
+    width: 50%;
+  }
+
+  .header-container .desktop-content .hero-image img {
+    width: 100%;
+    margin: 0;
+  }
+
+  .header-container .desktop-content .desktop-text .header-title {
+    font-size: 72px;
+    margin-bottom: 30px;
+  }
+
+  .header-container .desktop-content .desktop-text .header-paragraph {
+    font-size: 16px;
+    font-weight: 200;
+    width: 460px;
+    line-height: 1.3;
+  }
+
+  .header-container .buttons {
+    align-self: flex-start;
+    margin-top: -56px;
+  }
+
+  main .new {
+    max-width: 1366px;
+    margin: 40px auto;
+  }
+
+  .new .new-image img {
+    width: 50%;
+  }
+
+  .technology {
+    max-width: 1366px;
+  }
+
+  .technology img {
+    width: 30%;
+  }
+
+  .card .buttons .buy-now,
+  .card .buttons .read-more {
+    width: 124px;
+    height: 40px;
+  }
+
+  .card .buttons button a {
+    font-size: 16px;
+  }
+
+  #contact-us {
+    width: 30%;
+    margin: 32px auto;
+  }
+
+  #contact-us form {
+    width: 85%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  #contact-us form button {
+    font-size: 16px;
+    width: 120px;
+    height: 40px;
+  }
+}
+
+/* IPAD PRO 1024x1366 */
+@media (min-width: 1024px) and (min-height: 1366px) {
+  .header-container .desktop-menu .menu ul li a {
+    font-size: 24px;
+  }
+
+  .header-container .desktop-content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .header-container .desktop-content .hero-image img {
+    width: 50%;
+    margin: 0 auto 100px auto;
+  }
+
+  .header-container .desktop-content .desktop-text .header-title {
+    font-size: 80px;
+    margin-bottom: 50px;
+  }
+
+  .header-container .desktop-content .desktop-text .header-paragraph {
+    font-size: 24px;
+    width: 460px;
+  }
+
+  .header-container .buttons {
+    align-self: center;
+  }
+
+  .new {
+    height: 50vh;
+  }
+
+  .new .new-image img {
+    width: 50%;
+  }
+}
+
+/* IPAD PRO 1366x1024 */
+@media (min-width: 1366px) and (min-height: 1024px) {
+  .header {
+    border-radius: 0 0 100px 100px;
+  }
+
+  .header-container .desktop-menu .menu ul li a {
+    font-size: 24px;
+    margin-right: 64px;
+  }
+
+  .header-container .desktop-menu .logo {
+    font-size: 56px;
+  }
+
+  .header-container .desktop-content {
+    margin-top: 30px;
+  }
+
+  .header-container .desktop-content .desktop-text .header-title {
+    font-size: 80px;
+  }
+
+  .header-container .desktop-content .desktop-text .header-paragraph {
+    font-size: 24px;
+    width: 400px;
+  }
+
+  .header-container .buynow,
+  .header-container .learnmore {
+    font-size: 24px;
+    padding: 20px 48px;
+  }
+
+  .new {
+    height: 80vh;
+  }
+
+  .new .new-image img {
+    width: 50%;
+  }
+  .new h2 {
+    font-size: 56px;
+  }
+
+  .new h4 {
+    font-size: 32px;
+  }
+
+  .new p {
+    font-size: 24px;
+  }
+
+  .new .details-and-buy .details h5 {
+    font-size: 24px;
+  }
+
+  .new .buy-btn {
+    font-size: 24px;
+    padding: 24px 56px;
+    border-radius: 50px;
+  }
+}
